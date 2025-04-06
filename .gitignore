@@ -1,0 +1,92 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Build and compilation
+build/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Testing
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+
+# User-generated files
+*.mo
+*.pot
+
+# Python development files
+*.prof
+*.cover
+.hypothesis/
+
+# React/Vite files
+.cache/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node/React
+node_modules/
+dist/
+.temp/
+.cache/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker files (optional, depending on your workflow)
+!Dockerfile
+!docker-compose.yml
