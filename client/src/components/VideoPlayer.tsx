@@ -22,11 +22,13 @@ const VideoPlayer: React.FC = () => {
     },
   }
   
-  if (!videoId) return null
-  
   return (
-    <div className="mt-4">
-      <YouTube videoId={videoId} opts={opts} />
+    <div>
+      {
+        videoId
+          ? <YouTube videoId={videoId} opts={opts} />
+          : <div className='border p-4 rounded'>¡Tu video aparecera aqui!</div>
+      }
     </div>
   )
 }
