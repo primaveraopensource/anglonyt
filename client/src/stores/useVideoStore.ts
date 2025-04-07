@@ -1,11 +1,11 @@
 import { create } from 'zustand'
-import { TranscriptResponse, Topic, Question } from '../models/video'
+import { TranscriptResponse, Question, Topics } from '../models/video'
 import { fetchTranscript as ft, generateQuestions as gq, generateTopics as gt } from '../services/api'
 
 interface VideoState {
   videoUrl: string
   transcript: string
-  topics: Topic[]
+  topics: Topics
   questions: Question[]
   isLoading: boolean
   error: string | null
@@ -19,7 +19,7 @@ interface VideoState {
 export const useVideoStore = create<VideoState>((set, get) => ({
   videoUrl: '',
   transcript: '',
-  topics: [],
+  topics: {cards: [], vocabulary: []},
   questions: [],
   isLoading: false,
   error: null,
@@ -65,7 +65,7 @@ export const useVideoStore = create<VideoState>((set, get) => ({
   reset: () => set({
     videoUrl: '',
     transcript: '',
-    topics: [],
+    topics: {cards: [], vocabulary: []},
     questions: [],
     isLoading: false,
     error: null

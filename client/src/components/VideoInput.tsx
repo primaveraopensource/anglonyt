@@ -17,16 +17,16 @@ const VideoInput: React.FC = () => {
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
           placeholder="Enter YouTube URL"
-          className="flex-1 p-2 border rounded"
+          className="flex-1 py-2 px-4 border border-gray-700 rounded-full"
           required
           disabled={isLoading}
         />
         <button 
           type="submit" 
-          className={`px-4 py-2 rounded text-white ${isLoading ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-800'}`}
+          className={`px-4 py-2 rounded-full text-white ${isLoading ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-800'}`}
           disabled={isLoading}
         >
-          {isLoading ? 'Cargando...' : 'Generatar'}
+          {isLoading ? 'Cargando...' : 'Generar'}
         </button>
       </form>
     </div>

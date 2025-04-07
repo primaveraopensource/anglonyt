@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from 'axios'
 import {
   TranscriptResponse,
-  Topic,
-  Question
+  Question,
+  Topics
 } from '../models/video'
 
 const apiClient: AxiosInstance = axios.create({
@@ -19,11 +19,11 @@ export const fetchTranscript = async (videoUrl: string): Promise<TranscriptRespo
   return response.data
 }
 
-export const generateTopics = async (transcript: string): Promise<Topic[]> => {
+export const generateTopics = async (transcript: string): Promise<Topics> => {
   const response = await apiClient.post<{ topics: string }>('/api/generate/topics', {
     transcript
   })
-  return JSON.parse(response.data.topics) as Topic[]
+  return JSON.parse(response.data.topics) as Topics
 }
 
 export const generateQuestions = async (transcript: string): Promise<Question[]> => {

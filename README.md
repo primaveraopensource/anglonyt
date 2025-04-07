@@ -1,5 +1,5 @@
 # AnglonYT
-![Demo](./docs/media/demo-capture.PNG)
+![Demo](./docs/media/capture.PNG)
 Self-hosted and open-source application for learning English through YouTube videos and AI.
 
 ## TODOs
