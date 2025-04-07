@@ -3,8 +3,8 @@
 Self-hosted and open-source application for learning English through YouTube videos and AI.
 
 ## TODOs
-- [ ] YouTube Client
-- [ ] AI Integrations
+- [X] YouTube Client
+- [X] AI Integrations
 - [ ] Chat to resolve questions
 - [ ] Interactive Notes and Questions
 - [ ] Easy deployment with Docker
