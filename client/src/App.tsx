@@ -15,6 +15,7 @@ const App: React.FC = () => {
   
   return (
     <div className="flex min-h-screen">
+      <button className='absolute bottom-5 left-5 flex justify-center items-center w-12 h-12 bg-green-600 hover:bg-green-800 p-3 text-white font-bold text-2xl rounded-full shadown'>?</button>
       <div className="p-4 w-1/2">
         <VideoPlayer />
         
