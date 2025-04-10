@@ -1,5 +1,5 @@
 # AnglonYT
-![Demo](./docs/media/demo_capture.PNG)
+![Demo](./docs/media/anglonyt.JPG)
 Self-hosted and open-source application for learning English through YouTube videos and AI.
 
 ## TODOs
@@ -18,6 +18,7 @@ Self-hosted and open-source application for learning English through YouTube vid
   - Zustand
   - TailwindCSS
   - react-youtube
+  - react-icons
 - **Backend**
   - Flask
   - youtube-transcript-api
@@ -53,7 +54,9 @@ anglonyt/
 │   │   ├── services/
 │   │   ├── components/
 │   │   ├── models/
+│   │   ├── layouts/
 │   │   ├── stores/
+│   │   ├── styles/
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── ...

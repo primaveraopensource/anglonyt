@@ -27,7 +27,7 @@ const VideoPlayer: React.FC = () => {
       {
         videoId
           ? <YouTube videoId={videoId} opts={opts} />
-          : <div className='border p-4 rounded'>¡Tu video aparecera aqui!</div>
+          : <div className='border border-stone-800 text-stone-700 text-center p-4 rounded'>¡Tu video aparecera aqui!</div>
       }
     </div>
   )
