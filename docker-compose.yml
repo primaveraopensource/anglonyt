@@ -2,23 +2,18 @@ services:
   server:
     build: ./server
     env_file: .env
-    ports:
-      - "5000:5000"
     volumes:
       - ./server:/app
+    ports:
+      - "5000:5000"
+    command: ["gunicorn", "--bind", "0.0.0.0:5000", "--reload", "--workers=1", "--timeout=120", "app:create_app()"]
 
   client:
     build: ./client
     env_file: .env
-    ports:
-      - "5173:5173"
     volumes:
       - ./client:/app
       - /app/node_modules
-    depends_on:
-      - server
-
-networks:
-  default:
-    name: anglonyt-network
-    driver: bridge
+    ports:
+      - "5173:5173"
+    command: ["npm", "run", "dev"]
