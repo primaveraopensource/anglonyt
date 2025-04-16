@@ -1,6 +1,6 @@
 import React from 'react'
 import YouTube from 'react-youtube'
-import { useVideoStore } from '../stores/useVideoStore'
+import { useVideoStore } from '../stores/use-video-store'
 
 const VideoPlayer: React.FC = () => {
   const { videoUrl } = useVideoStore()

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import VideoInput from './components/VideoInput'
-import VideoPlayer from './components/VideoPlayer'
-import { useVideoStore } from './stores/useVideoStore'
-import ViewLayout from './layouts/ViewLayout'
+import VideoInput from './components/video-url-input'
+import VideoPlayer from './components/video-player'
+import { useVideoStore } from './stores/use-video-store'
+import GenerativeViewLayout from './layouts/generative-view-layout'
 import { BsChatSquareTextFill } from 'react-icons/bs'
 
 const App: React.FC = () => {
@@ -27,7 +27,7 @@ const App: React.FC = () => {
       </div>
       <div className='relative flex flex-col border-l bg-stone-900 border-stone-800 w-1/2 max-h-screen p-4 overflow-y-auto gap-4'>
         <VideoInput />
-        <ViewLayout />
+        <GenerativeViewLayout />
       </div>
     </div>
   )

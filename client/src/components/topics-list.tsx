@@ -1,5 +1,5 @@
 import React from 'react'
-import { useVideoStore } from '../stores/useVideoStore'
+import { useVideoStore } from '../stores/use-video-store'
 
 const TopicsList: React.FC = () => {
   const { topics, isLoading } = useVideoStore()

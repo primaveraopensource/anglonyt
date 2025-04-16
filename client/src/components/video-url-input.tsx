@@ -1,7 +1,7 @@
 import React from 'react'
-import { useVideoStore } from '../stores/useVideoStore'
+import { useVideoStore } from '../stores/use-video-store'
 import { GiPlayButton } from 'react-icons/gi'
-import LoadingSpin from './LoadingSpin'
+import LoadingSpin from './loading-spin'
 
 const VideoInput: React.FC = () => {
   const { videoUrl, setVideoUrl, fetchTranscript, isLoading } = useVideoStore()
