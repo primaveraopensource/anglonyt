@@ -1,31 +1,56 @@
 from google import genai
 
 def generate_topics(transcript, api_key):
-    """Genera tarjetas de temas usando la API de Gemini"""
+    """Generate topic cards using the Gemini API"""
     try:
         client = genai.Client(api_key=api_key)
         
-        prompt = f"""Eres un instructor de inglés especializado en enseñanza para principiantes. Tu tarea es analizar el siguiente texto, que es una transcripción de un video, y extraer los temas principales. Presenta estos temas en formato de tarjetas didácticas, adecuadas para personas que están aprendiendo inglés. Asegúrate de que cada tarjeta sea clara, concisa y útil para reforzar el aprendizaje del idioma.
-        
-        {transcript}
-        
-        Devuelve SOLO en formato JSON válido con la siguiente estructura:
-        {{
-            "cards": [
+        prompt = f"""
+            Task: Create English learning flashcards and vocabulary list from a video transcript.
+
+            Description:
+            You are an expert English language instructor for beginners. Analyze the following video transcript and extract key learning topics and vocabulary. Present these topics as flashcards with summaries and relevant grammar points, suitable for beginner English learners.
+
+            Transcript:
+            {transcript}
+
+            Requirements:
+
+            1.  Identify the main learning topics covered in the transcript.
+            2.  Create flashcards for each topic, including:
+                * A clear and concise title.
+                * The start minute in the video where the topic is discussed.
+                * A brief summary of the topic.
+                * Relevant English grammar points illustrated in the topic.
+            3.  Generate a vocabulary list with words and their meanings from the transcript.
+            4.  Return the output ONLY in valid JSON format, adhering strictly to the following structure:
+
                 {{
-                    "title": "Título del tema",
-                    "start_minute": "00:00", 
-                    "summary": "Resumen breve", 
-                    "key_points": ["punto 1", "punto 2"]
+                    "cards": [
+                        {{
+                            "title": "Topic title",
+                            "start_minute": "00:00",
+                            "summary": "Brief summary",
+                            "english_grammar": ["point 1", "point 2"]
+                        }}
+                    ],
+                    "vocabulary": [
+                        {{
+                            "word": "word",
+                            "meaning": "meaning"
+                        }}
+                    ]
                 }}
-            ],
-            "vocabulary": [
-                {{
-                    "word": "palabra",
-                    "meaning": "significado"
-                }}
-            ]
-        }}
+
+            Additional Instructions:
+
+            * Ensure the JSON output is valid and easily parsable.
+            * Focus on clarity and conciseness for beginner learners.
+            * If the transcript contains examples, use them to illustrate grammar points.
+            * If the transcript contains lists, or any other structured data use that data to create the flashcards.
+
+            Output Format:
+            JSON
         """
         
         response = client.models.generate_content(

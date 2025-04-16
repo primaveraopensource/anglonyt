@@ -6,7 +6,7 @@ interface TopicCard {
   title: string
   start_minute: string
   summary: string
-  key_points: string[]
+  english_grammar: string[]
 }
 
 interface Word {

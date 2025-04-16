@@ -18,7 +18,7 @@ const TopicsList: React.FC = () => {
                 <h3 className="font-semibold">{topic.title}</h3>
                 <p className="text-sm text-stone-600 mt-1">{topic.summary}</p>
                 <ul className="mt-2 pl-5 list-disc">
-                  {topic.key_points.map((point, i) => (
+                  {topic.english_grammar.map((point, i) => (
                     <li key={i} className="text-sm text-stone-400">{point}</li>
                   ))}
                 </ul>
